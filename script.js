@@ -31,7 +31,9 @@ async function getShlokData(ch, sh) {
 function displayShlok(chapter, shlok) {
   let { name, translation } = chapter;
   let { slok, transliteration, tej, siva, purohit, prabhu } = shlok;
-  p.innerText = `${name} || ${translation}\n\n${slok}\n\n${transliteration}\n\nExplanations:\n\n${tej['author']}:\n\n${tej['ht']}\n\n\n${siva['author']}:\n\n${siva['et']}\n\n${siva['ec']}\n\n\n${purohit['author']}:\n\n${purohit['et']}\n\n\n${prabhu['author']}:\n\n${prabhu['et']}\n\n${prabhu['ec']}`;
+  p.innerHTML = `
+<h2>${name} || ${translation}</h2>\n\n<h3>${slok}\n\n${transliteration}</h3>\n\n<h2>Explanations:</h2>\n\n<strong>${tej['author']}:</strong>\n\n${tej['ht']}\n\n\n<strong>${siva['author']}:</strong>\n\n${siva['et']}\n\n${siva['ec']}\n\n\n<strong>${purohit['author']}:</strong>\n\n${purohit['et']}\n\n\n<strong>${prabhu['author']}:</strong>\n\n${prabhu['et']}\n\n${prabhu['ec']}
+  `;
 }
 
 function showError(msg) {
