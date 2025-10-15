@@ -9,7 +9,6 @@ let chInp = document.querySelector("#ch");
 let shInp = document.querySelector("#sh");
 let chapterCache = {};
 
-//Give only the chapter and verse number of the Bhagwat Gita Shlok, In the format - Chapter,Verse. Remember to give only the numbers and nothing more except the comma. The Shlok is - Karmnyevadhikaraste
 
 async function fetchJSON(url) {
   const res = await fetch(url);
@@ -66,7 +65,7 @@ async function getShlok(e) {
 
 async function getRandomShlok(e){
   e.preventDefault()
-
+    
 try {
     const ch = Math.ceil(Math.random() * 18);
     currCh = ch;
