@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shlokas</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="website icon" href="https://image.shutterstock.com/image-vector/santana-dharma-religious-book-shreemad-250nw-2377019621.jpg">
-    <link rel="stylesheet" href="style.css">
-    <!-- <audio src="Om.mp3" autoplay loop></audio> -->
+    <link rel="website icon" href="gita.png">
+    <audio src="Om.mp3" autoplay loop></audio>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1>ॐ</h1>
@@ -19,7 +19,9 @@
             <input type="number" id="sh" placeholder="Shlok Number" value="1" min="1">
             <button id="forward">&#x2192;</button>
             <button id="btn">Get Shlok</button>
-            <button id="rand">Random Shlok</button>
+            <button id="rand">Shlok of the Day</button>
+            <input type="text" id="shPart" placeholder="Enter Shlok Part">
+            <button id="search"><i class="fa fa-search"></i></button>
         </form>
         <section class="p">
             <div id="p1">Get Shlok by Specifying Chapter and Shlok Number</div>
@@ -27,4 +29,5 @@
     </div>
 </body>
 <script src="script.js"></script>
+<script src="search.js"></script>
 </html>

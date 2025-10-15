@@ -24,6 +24,7 @@ body {
     align-items: center;
     min-height: 100vh;
     box-sizing: border-box;
+    background-image: url('battlefield.png');
 }
 
 h1, h2 {
@@ -103,7 +104,7 @@ form {
     margin-bottom: 30px;
 }
 
-input[type="number"] {
+input[type="number"], #shPart {
     font-family: 'Roboto', sans-serif;
     padding: 10px 15px;
     border: 1px solid var(--border-color);
@@ -114,7 +115,7 @@ input[type="number"] {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="number"]:focus {
+input[type="number"]:focus, #shPart:focus {
     border-color: var(--accent-color);
     outline: none;
     box-shadow: 0 0 0 3px rgba(168, 126, 91, 0.2);
@@ -202,6 +203,10 @@ input[type="number"]:focus {
     font-size: 1.1em;
     margin: 8px 0;
     padding-left: 15px; /* Indent summary paragraphs */
+}
+
+div[id^="ch"]{
+    opacity: 0.85;
 }
 
 /* Responsive adjustments */
