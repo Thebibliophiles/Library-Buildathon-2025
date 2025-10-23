@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GITA</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="website icon" href="https://image.shutterstock.com/image-vector/santana-dharma-religious-book-shreemad-250nw-2377019621.jpg">
-    <!-- <audio src="Om.mp3" autoplay loop></audio> -->
+    <title>Project: Gita</title>
+    <link rel="website icon" href="gita.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div class="container">
-        <form>
-            <button id="back">&larr;</button>
-            <input type="number" id="ch" placeholder="Enter Chapter Number" value="1" min="1" max="18">
-            <input type="number" id="sh" placeholder="Enter Shlok Number" value="1" min="1">
-            <button id="forward">&#x2192;</button>
-            <button id="btn">Get Shlok</button>
-            <button id="rand">Random</button>
-        </form>
-        <section class="p">
-            <p id="p1">Gita Shlok Generator <br><br> Specify The Chapter Number <br><br> Along With The Shlok Number <br><br> To Get The Shlok <br><br> Language => Sanskrit + English</p>
-        </section><br><br>
-    </div>
+
+<body class="min-h-screen bg-[url('battlefield.png')] bg-cover bg-center bg-no-repeat bg-fixed text-gray-900 transition-colors duration-500 relative">
+    <main class="flex flex-col justify-center items-center min-h-screen">
+    <div class="rounded-3xl shadow-2xl border-2 border-amber-200 bg-gradient-to-br from-white/90 via-amber-50/80 to-yellow-100/80 backdrop-blur-xl p-8 md:p-14 flex flex-col justify-center items-center space-y-8 max-w-[95%] w-[420px] md:w-[520px] mx-auto transition-all">
+            <div class="flex flex-col items-center w-full">
+                <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-2 text-amber-600 drop-shadow-lg">ॐ</h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-3 tracking-wide">Shrimad Bhagavad Gita</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-amber-400 via-amber-600 to-amber-400 rounded-full mb-4"></div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                <a href="chapters.html" class="w-full sm:w-auto"><button class="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 transition-all rounded-lg p-3 text-white font-semibold w-full shadow-md hover:shadow-xl">Chapters</button></a>
+                <a href="shlokas.html" class="w-full sm:w-auto"><button class="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 transition-all rounded-lg p-3 text-white font-semibold w-full shadow-md hover:shadow-xl">Shlokas</button></a>
+            </div>
+        </div>
+        <footer class="text-center mt-10 text-sm text-amber-700">
+            <p>ॐ तत् सत्</p>
+        </footer>
+    </main>
+    <img src="TeamLogo.jpeg" alt="TheBibliophiles Gita Project Logo" class="fixed bottom-6 right-6 w-20 h-20 rounded-full border-4 border-amber-400 shadow-lg bg-white object-cover z-50" style="object-fit:cover;" />
 </body>
-<script src="script.js"></script>
+
 </html>
