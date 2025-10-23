@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters - Bhagavad Gita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="website icon" href="gita.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="loadData()" class="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-100 to-orange-100 dark:from-gray-900 dark:via-amber-900 dark:to-black text-gray-900 dark:text-gray-100 relative">
+    <div class="fixed inset-0 bg-[url('battlefield.png')] bg-cover bg-center opacity-30 dark:opacity-10 pointer-events-none z-0"></div>
+    <div class="fixed top-4 right-4 flex gap-3 z-10">
+        <button id="audioControl" class="p-2 rounded-full bg-white/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors shadow">
+            <i class="fa fa-volume-up text-gray-700 dark:text-gray-300"></i>
+        </button>
+        <button id="themeToggle" class="p-2 rounded-full bg-white/80 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors shadow">
+            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+            </svg>
+            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+            </svg>
+        </button>
+    </div>
+    <audio id="bgAudio" src="Om.mp3" loop autoplay></audio>
+
+    <main class="container mx-auto px-4 py-12 max-w-2xl relative z-10">
+        <header class="text-center mb-10">
+            <h1 class="text-5xl font-semibold tracking-tight mb-1">ॐ</h1>
+            <h2 class="text-2xl font-medium tracking-wide text-amber-700 dark:text-amber-300">Chapters</h2>
+        </header>
+        <div class="bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-lg p-6 md:p-8 backdrop-blur-md border border-amber-100 dark:border-gray-800">
+            <section class="flex flex-col gap-6">
+                <div id="ch1" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch2" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch3" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch4" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch5" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch6" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch7" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch8" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch9" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch10" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch11" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch12" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch13" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch14" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch15" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch16" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch17" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm mb-2"></div>
+                <div id="ch18" class="bg-amber-50 dark:bg-gray-800/70 border border-amber-200 dark:border-amber-700 rounded-lg px-4 py-5 shadow-sm"></div>
+            </section>
+        </div>
+        <footer class="text-center mt-10 text-sm text-amber-700 dark:text-amber-300">
+            <p>ॐ तत् सत्</p>
+        </footer>
+    </main>
+    <img src="TeamLogo.jpeg" alt="TheBibliophiles Gita Project Logo" class="fixed bottom-6 right-6 w-20 h-20 rounded-full border-4 border-amber-400 shadow-lg bg-white object-cover z-50" style="object-fit:cover;" />
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            html.classList.add('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+        const audioControl = document.getElementById('audioControl');
+        const audio = document.getElementById('bgAudio');
+        const audioIcon = audioControl.querySelector('i');
+        window.addEventListener('DOMContentLoaded', () => {
+            if (audio.paused) {
+                audio.play().catch(()=>{});
+                audioIcon.classList.remove('fa-volume-off');
+                audioIcon.classList.add('fa-volume-up');
+            }
+        });
+        audioControl.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                audioIcon.classList.remove('fa-volume-off');
+                audioIcon.classList.add('fa-volume-up');
+            } else {
+                audio.pause();
+                audioIcon.classList.remove('fa-volume-up');
+                audioIcon.classList.add('fa-volume-off');
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="chapters.js"></script>
+</body>
+</html>
