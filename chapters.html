@@ -8,7 +8,8 @@
     <link rel="website icon" href="gita.png">
     <audio src="Om.mp3" autoplay loop></audio>
 </head>
-<body onload="loadData()">
+<body onload="loadData(); let audio = new Audio('Om.mp3'); audio.play()">
+    <audio src="Om.mp3" style="display: none;" autoplay loop></audio>
     <h1>ॐ</h1>
     <h2>Chapters</h2>
     <div id="ch1"></div>
